@@ -21,13 +21,21 @@
 				
 			</div>
             {% if request.user.is_authenticated %}
-            
-                <nav>
-                    <a href="/index/">Inicio</a>
-                    <a href="/ListaPerros/">Lista de Perritos</a>
-                    
-                    <a href="/salir/">Salir</a>
-                </nav>
+                {% if request.user.is_staff %}
+                    <nav>
+                        <a href="/index/">Inicio</a>
+                        <a href="/gestionUsuario/">Gestion de Usuarios</a>
+                        <a href="/gestionMascota/">Gestion de Mascotas</a>
+                        <a href="/salir/">Salir</a>
+                    </nav>
+                {% else %}
+                    <nav>
+                        <a href="/index/">Inicio</a>
+                        <a href="/ListaPerros/">Lista de Perritos</a>
+                        
+                        <a href="/salir/">Salir</a>
+                    </nav>
+                {% endif%}
             {% else %}
                 <nav>
 				    <a href="/index/">Inicio</a>

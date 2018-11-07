@@ -9,7 +9,7 @@
     </tr>
     {% for m in mascotas %}
     <tr>
-        <td>{{ m.fichaMascota}}    </td><td>{{ m.nombreMascota}}    </td><td>{{ m.razaMascota}}    </td><td>  {{ m.estadoMascota }}</td><td>  {{ m.fotoMascota }}</td><td><a href="">Adoptar</a></td>
+        <td>{{ m.fichaMascota}}    </td><td>{{ m.nombreMascota}}    </td><td>{{ m.razaMascota}}    </td><td>  {{ m.estadoMascota }}</td><td class="foto"><img src="{{m.fotoMascota.url}}" width="100px" height="50px"></td><td><a href="">Adoptar</a></td>
     </tr>
     {% endfor %}
     <br>   

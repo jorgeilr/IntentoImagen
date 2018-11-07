@@ -47,10 +47,14 @@ def gestionarUsuarios(request):
     form=AgregarUsuario(request.POST)
     if form.is_valid():
         data=form.cleaned_data
-       #regDB=User(username=data.get("username"),password=data.get("password"),email=data.get("correo"))
         regDB=User.objects.create_user(username=data.get("username"),email=data.get("correo"),password=data.get("password"))
         usuario=Usuario(user=regDB,rut=data.get("rut"),perfil=data.get("perfil"),nombre=data.get("nombre"),)
-        #regDB.save()
+        tipo=data.get("perfil")
+        if tipo=="Administrador":
+            regDB.is_staff=True
+        else:
+            regDB.is_staff=False
+        regDB.save()
         usuario.save()
    
     form=AgregarUsuario()
