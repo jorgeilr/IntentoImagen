@@ -1,0 +1,11 @@
+{%extends 'maqueta.html'%}
+
+{% block Formulario%}
+<H2>Creacion de cuenta de usuario</H2>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Crear</button>
+
+</form>
+{% endblock %}

@@ -1,0 +1,77 @@
+{%extends 'maqueta.html'%}
+{% load staticfiles %}
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Página Muestra</title>
+    <meta name="description" content="Pagina completa con Flexbox"><!--Utilizamos el descriptor en meta para apoyar la busqueda de contenidos en la web-->
+    <meta name="viewport" content="width=device-widtg, user-scalable=no, initial-scale=1.0,maximun-scale=1.0,minimun-scale=1.0"><!--las escalas indican un punto inicial, la escala maxima y minima-->
+    <script src="prefix.js" type="test/javascript"></script><!--Script para asegurarq eu en todos los navegadores y dispositivos el sitio se vea igual-->
+    <link rel="stylesheet" href="{% static 'estilos.css' %}">
+		<!--para carousel-->
+		 <link rel="stylesheet" href="{% static 'jquery.bxslider.css' %}">
+		 <link rel="stylesheet" href="{% static 'estilo.css' %}">
+	<script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/jquery.bxslider.min.js' %}"></script>
+</head>
+	{% block Principal %}
+			<div id="carrusel">
+				<div><img src="{% static 'imagenes/perro1.jpg' %}"></div>
+				<div><img src="{% static 'imagenes/perro2.jpg' %}"></div>
+				<div><img src="{% static 'imagenes/perro3.jpg' %}"></div>
+				<div><img src="{% static 'imagenes/perro4.jpg' %}"></div>
+				</div>
+				<br>
+				<script src="{% static 'js/codigo.js' %}"></script>
+				
+				<div class="social">
+				<center>
+				<a href="www.facebook.cl"><img src="{% static 'imagenes/facebook.png' %}" width="40"/></a>
+				<a href="www.google.cl"><img src="{% static 'imagenes/google.png' %}" width="40"/></a>
+				<a href="www.instagram.cl"><img src="{% static 'imagenes/instagram.png' %}" width="40"/></a>
+				<a href="www.mail.cl"><img src="{% static 'imagenes/mail.png' %}" width="40"/></a>
+				</center>
+				</div>
+				
+		
+		
+
+		<section class="main">
+		
+			<article>
+				<h2 ><b>RESCATE</b></h2>
+				<h3><small>ETAPA UNO</small></h3>
+				<div class=linea1>
+				<hr color=black ></hr>
+				</div>
+				<p>Rescatamos perros en situación de peligro y/o abandono.Los rehabilitamos y los preparamos para buscarles un hogar</p>
+				<img src="{% static 'imagenes/perroRescatado.jpg' %}"/>
+			</article>
+			<div class="financiamento">
+				 <img src="{% static 'imagenes/ayuda.jpg' %}">
+				 <h2 ><b>CROWFUNDING</b></h2>
+				<h3><small>FINANCIAMIENTO</small></h3>
+					<hr></hr>
+				<P>Sigue nuestras redes sociales para informarte acerca de las diversas campañas y actividades que realizamos para obtener financiamento para seguir ayudando.</P>
+			</div>
+			<br></br>
+			<div class="collage">
+			<div class="caja">
+				<img src="{% static 'imagenes/perroCollage7.jpg' %}" alt="perroCollage7">
+				<img src="{% static 'imagenes/perroCollage5.jpg' %}" alt="perroCollage7">
+				<img src="{% static 'imagenes/perroCollage6.jpg' %}" alt="perroCollage7">
+			</div>
+			<div class="caja largo">
+				<img src="{% static 'imagenes/perroCollage4.jpg' %}" alt="perroCollage7">
+				<img src="{% static 'imagenes/perroCollage3.jpg' %}" alt="perroCollage7">
+			</div>
+			<div class="caja">
+				<img src="{% static 'imagenes/perroCollage2.jpg' %}" alt="perroCollage7" style="height:62%">
+				<img src="{% static 'imagenes/perroCollage1.jpg' %}" alt="perroCollage7">
+			</div>
+			</div>
+		</section>
+			
+		{% endblock%}
+</html>

@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="js/jquery.js"></script>
+        <link rel="stylesheet" href="estiloFormulario.css"> 
+        <title>Formulario Mis Perris</title>
+    </head>
+    <body>
+       
+        <div class="areaTrabajo">
+            <h1>Datos Postulante</h1>
+            <form id="registration_form" action="#" method="post">
+                <table>
+                     <tr>
+                        <td>Correo Electrónico</td><td><input type="email" class="form_text" name="email" id="email"></td>
+                        <td><span class="error" id="erroremail"></span></td>
+					</tr>
+					<tr>
+                        <td>RUN</td><td><input type="text" class="form_text" name="rutPostulante" id="rutPostulante"></td>
+						<td><span class="error" id="errorRutPostulante"></span></td>
+                    </tr>
+					<tr>
+                        <td>Nombre Completo</td><td><input type="letras" class="text" name="nombreCompleto" id="nombreCompleto"></td>
+						<td><span class="error" id="errorNombreCompleto"></span></td>
+                    </tr>
+					<tr>
+                        <td>Fecha de Nacimiento</td><td><input type="date" class="date" name="fechaNacimiento" id="fechaNacimiento"></td>
+						<td><span class="error" id="errorFechaNacimiento"></span></td>
+                    </tr>
+					<tr>
+                        <td>Telefono de contacto</td><td><input type="number" class="" name="telefonoPostulante" id="telefonoPostulante"></td>
+						<td><span class="error" id="errorTelefonoPostulante"></span></td>
+                    </tr>
+					<tr>
+                        <td>Region</td><td><select name="select">
+											<option value="value1" selected>Metropolitana</option> <option value="value2">I Tarapaca</option>
+											<option value="value3">II Antofagasta</option><option value="value4">III Atacama</option>
+											<option value="value5">IV Coquimbo</option><option value="value6">V Valparaiso</option>
+											<option value="value7">V Valparaiso</option><option value="value8">VI O'higgins</option>
+											<option value="value9">VII Maule</option><option value="value10">VIII Bio Bio</option>
+											<option value="value11">IX La Araucania</option><option value="value12">X Los Lagos</option>
+											<option value="value13">XI Aysén</option><option value="value14">XII Magallanes y Antartica</option>
+											<option value="value15">XV Arica y Parinacota</option>
+											
+						</select></td><td><span class="error" id="errorRegionUsuario"></span></td>
+                    </tr>
+					<tr>
+                        <td>Ciudad</td><td><select name="select">
+											<option value="value1" selected>Santiago</option> <option value="value2">Concepción</option>
+											<option value="value3">Valparaiso</option><option value="value4">La Serena</option>
+											<option value="value5">Antofagasta</option><option value="value6">Temuco</option>
+											<option value="value7">Rancagua</option><option value="value8">Iquique</option>
+											<option value="value9">Talca</option><option value="value10">Arica</option>
+											<option value="value11">Puerto Montt</option><option value="value12">Chillán</option>
+											<option value="value13">Los Angeles</option><option value="value14">Calama</option>
+											<option value="value15">Copiapo</option><option value="value16">Osorno</option>
+											<option value="value17">Osorno</option><option value="value18">Valdivia</option>
+											<option value="value19">Punta Arenas</option><option value="value20">San Antonio</option>
+											
+						</select></td>
+						<td><span class="error" id="errorCiudadUsuario"></span></td>
+                    </tr>
+					<tr>
+                        <td>Tipo de Vivienda</td><td><select name="select">
+											<option value="value1" selected>Casa con patio grande</option> <option value="value2">Casa con patio pequeño</option>
+											<option value="value3">Casa sin patio</option><option value="value4">Departamento</option>
+						</select><td><span class="error" id="errorCasaUsuario"></span></td>
+                    </tr>
+					
+                   
+                   
+                    <tr>
+                        <td></td><td><input type="submit" value="Enviar" class="btn-enviar" id="btn-enviar"></td><td></td>
+                    </tr>
+                </table>
+                
+            </form>
+        </div>
+        
+    <script  src="js/codigoValidacion.js"></script>    
+    </body>
+</html>

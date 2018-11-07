@@ -1,0 +1,61 @@
+{% load staticfiles %}
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Página Muestra</title>
+    <meta name="description" content="Pagina completa con Flexbox"><!--Utilizamos el descriptor en meta para apoyar la busqueda de contenidos en la web-->
+    <meta name="viewport" content="width=device-widtg, user-scalable=no, initial-scale=1.0,maximun-scale=1.0,minimun-scale=1.0"><!--las escalas indican un punto inicial, la escala maxima y minima-->
+    <script src="prefix.js" type="test/javascript"></script><!--Script para asegurarq eu en todos los navegadores y dispositivos el sitio se vea igual-->
+    <link rel="stylesheet" href="{% static 'estilos.css' %}">
+		<!--para carousel-->
+		 <link rel="stylesheet" href="{% static 'jquery.bxslider.css' %}">
+		 <link rel="stylesheet" href="{% static 'estilo.css' %}">
+	<script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/jquery.bxslider.min.js' %}"></script>
+</head>
+    <body>
+     
+		<header>
+			<div class="logo">
+				<img src="{% static 'imagenes/logo.png' %}">
+				
+			</div>
+            {% if request.user.is_authenticated %}
+            
+                <nav>
+                    <a href="/index/">Inicio</a>
+                    <a href="/ListaPerros/">Lista de Perritos</a>
+                    
+                    <a href="/salir/">Salir</a>
+                </nav>
+            {% else %}
+                <nav>
+				    <a href="/index/">Inicio</a>
+				    <a href="/registro/">Registrarse</a>
+				    <a href="/login/">Ingresar</a>
+                    <a href="#">Contactanós</a>
+			    </nav>
+            {% endif%}
+        </header>
+        <section>
+            <div class="contenedor">
+                    {% block Principal%}
+                    {% endblock %}
+                    {% block Login%}
+                    {% endblock %}
+                <div class="lista">
+                    {% block Lista%}
+                    {% endblock %}
+                </div>
+                <br>
+                <div class="formulario">
+                    {% block Formulario%}
+                    {% endblock %}
+                </div>
+            </div>
+        </section>
+    </body>
+    <footer>
+        <H4 align="right">Desarrollo Web y Mobile</H4>
+    </footer>
+</html>

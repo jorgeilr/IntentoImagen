@@ -1,0 +1,29 @@
+{%extends 'maqueta.html'%}
+{% block Lista %}
+{% if mascotas %}
+<table>                   
+    <tr>
+        <td>id</td><td>Nombre Mascota</td><td>raza de Mascota</td><td>Estado de la Mascota</td>
+    </tr>
+    {% for m in mascotas %}
+    <tr>
+        <td>{{ m.fichaMascota}}    </td><td>{{ m.nombreMascota}}    </td><td>{{ m.razaMascota}}    </td><td>  {{ m.estadoMascota }}</td>
+    </tr>
+    {% endfor %}
+    <br>   
+</table>
+{% else %}
+<h2>No hay Mascotas registrados</h2>
+{% endif %}
+{% endblock %}
+{% block Formulario%}
+<form  role="form"  enctype="multipart/form-data" action="" method="POST" id="upload-image-form"> 
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Agregar Mascota</button>
+    
+</form>
+{% endblock %}
+
+
+

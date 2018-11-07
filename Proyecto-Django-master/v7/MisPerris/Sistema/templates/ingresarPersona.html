@@ -1,0 +1,23 @@
+{%extends 'maqueta.html'%}
+{% load staticfiles %}
+<html>
+    <head>
+        <!--<link href="css/Maqueta.css" rel="stylesheet">-->
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="http://localhost:8000/index">Index</a>
+            
+                <a href="http://localhost:8000/ingresarMascota">Ingresar Mascota</a>
+                <a href="#">Ingresar Persona</a>
+            </nav>
+        </header>
+        <div class="contenedor">
+            <form method="POST" class="post-form">{% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="save btn btn-default">Save</button>
+        </form>
+        </div>
+    </body>
+</html>

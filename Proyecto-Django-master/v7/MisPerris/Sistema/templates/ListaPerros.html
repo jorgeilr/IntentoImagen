@@ -1,0 +1,20 @@
+{%extends 'maqueta.html'%}
+{% block Lista %}
+<a href="/gestionMascota/">Lista de Perritos</a>
+
+{% if mascotas %}
+<table>                   
+    <tr>
+        <td>id</td><td>Nombre Mascota</td><td>raza de Mascota</td><td>Estado de la Mascota</td><td>Foto de la Mascota</td>
+    </tr>
+    {% for m in mascotas %}
+    <tr>
+        <td>{{ m.fichaMascota}}    </td><td>{{ m.nombreMascota}}    </td><td>{{ m.razaMascota}}    </td><td>  {{ m.estadoMascota }}</td><td>  {{ m.fotoMascota }}</td><td><a href="">Adoptar</a></td>
+    </tr>
+    {% endfor %}
+    <br>   
+</table>
+{% else %}
+<h2>No hay Mascotas registrados</h2>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,29 @@
+{%extends 'maqueta.html'%}
+{% block Lista %}
+<h1>Lista de usuarios</h1>
+{% if usuarios %}
+<table>                   
+    <tr>
+        <td>Usuario</td><td>correo</td><td>RUT</td><td>Perfil</td><td>Nombre</td>
+    </tr>
+    {% for u in usuarios %}
+    <tr>
+        <td>{{ u.user.username}}    </td><td>{{ u.user.email}}    </td><td>  {{ u.rut }}</td><td>  {{ u.perfil }}</td><td>  {{ u.nombre }}</td>
+    </tr>
+    {% endfor %}
+    <br>   
+</table>
+{% else %}
+<h2>No hay usuarios registrados</h2>
+{% endif %}
+{% endblock %}
+{% block Formulario%}
+<H2>Agregar Nuevo Usuario</H2>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Agregar Usuario</button>
+
+</form>
+{% endblock %}
+
