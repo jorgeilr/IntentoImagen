@@ -1,0 +1,14 @@
+{%extends 'maqueta.html'%}
+
+{% block Principal %}
+<form class="formu" method="POST">
+    <h1>Recuperacion de Contraseña</h1>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Enviar" class="btn-enviar">
+    {% if mensaje != "" %}
+      <script languaje='javascript'>alert('{{mensaje}}')</script>
+    {% endif %}
+
+</form>
+{% endblock %}

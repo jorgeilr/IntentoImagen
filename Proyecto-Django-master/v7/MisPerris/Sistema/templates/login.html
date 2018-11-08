@@ -1,8 +1,12 @@
 {% extends "maqueta.html" %}
+{% load staticfiles %}
 {% block Login%}
 <form method="POST">
     {%csrf_token%}
     {{form.as_p}}
+    <a href="/olvidoPass/">Olvido Su Contraseña?</a></td>
+    <br>
     <input type="submit" value="Ingresar al Sistema">
+    
 </form>
 {% endblock %}

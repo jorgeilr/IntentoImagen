@@ -119,4 +119,25 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-MEDIA_URL = '/media/'
+MEDIA_URL = 'Sistema/static/media/'
+
+
+# # DATOS CORREO
+# EMAIL_USE_SSL=False
+# EMAIL_USE_TLS=True
+# EMAIL_HOST='smtp.gmail.com'
+# # CORREO DEL HOST
+# EMAIL_HOST_USER='lopezjorge2828@gmail.com'
+# # OJO CON ESTO
+# EMAIL_HOST_PASSWORD='termas1292'
+# EMAIL_PORT=587
+
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'lopezjorge2828'
+EMAIL_HOST_PASSWORD = 'termas1292'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'lopezjorge2828@gmail.com'

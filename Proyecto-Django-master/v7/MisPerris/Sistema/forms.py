@@ -70,3 +70,10 @@ class AgregarMascota(forms.Form):
         razaMascota=forms.CharField(widget=forms.TextInput(),label="Raza Mascota :")  
         descripcion=forms.CharField(widget=forms.Textarea(),label="Descripcion :")
         estadoMascota=forms.ChoiceField(choices=resultadosPosibles)
+class RecuperacionForm(forms.Form):
+    username=forms.CharField(widget=forms.TextInput(),label="Nombre Usuario:")
+
+class RestablecerForm(forms.Form):
+    contra1=forms.CharField(widget=forms.PasswordInput(),label="Nueva Contraseña:")
+    contra2=forms.CharField(widget=forms.PasswordInput(),label="Ingresar Nueva Contraseña:")
+
